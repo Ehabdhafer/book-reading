@@ -21,16 +21,33 @@
     <main>
       <div class="container-sm">
         <div class="details">
-          <div class="details4">
-            <img
-              src="../assest/book image.jpg"
-              alt="book image"
-              class="details-img1"
-            />
-            <h6 class="details-page">pages : 400</h6>
+          <div class="details4" id="details4">
+            <div class="details-imgborder">
+              <img
+                src="../assest/book image.jpg"
+                alt="book image"
+                class="details-img1"
+              />
+            </div>
+            <div style="display: flex; justify-content: space-evenly">
+              <h6>Pages :</h6>
+              <h6 class="details-page" id="details-page">400</h6>
+            </div>
+            <div style="display: flex; justify-content: space-evenly">
+              <h6>Release Date :</h6>
+              <h6 class="details-date" id="details-date">2010</h6>
+            </div>
+            <div style="display: flex; justify-content: space-evenly">
+              <h6>Category :</h6>
+              <h6 class="details-catg" id="details-date">Philosophy</h6>
+            </div>
+            <div style="display: flex; justify-content: space-evenly">
+              <h6>Language :</h6>
+              <h6 class="details-lang" id="details-date">Arabic</h6>
+            </div>
           </div>
           <div class="details1">
-            <h1 class="book-name">Book Title</h1>
+            <h1 class="book-name" id="book-name">Book Title</h1>
             <div class="details2">
               <span>By</span>
               <span class="author-name">author name</span>
@@ -55,7 +72,7 @@
         <!-- ----------------------------------------------------------------------------------------------------------- -->
         <h3 style="margin: 80px 0 0">Related books</h3>
         <div class="card-container1">
-          <ul class="cards">
+          <ul class="cards2">
             <li class="card">
               <div>
                 <img src="../assest/book2.jpg" class="card-img-top" alt="..." />
@@ -171,69 +188,18 @@
           <h3>Readers Reviews</h3>
           <div class="average-rating1">
             <div class="average-rating2">
-              <h4 class="details-rating">5.0</h4>
+              <h4 class="details-rating2">5.0</h4>
               <h4>Average</h4>
             </div>
           </div>
         </div>
         <div class="form1">
-          <form action="">
+          <form action="" class="form2">
             <input type="text" id="write-review1" />
-            <button class="write-review">Write Review</button>
+            <input type="button" class="write-review" value="Write Review" />
           </form>
         </div>
         <div class="comments">
-          <div class="comment-box">
-            <div class="username1">
-              <img
-                src="../assest/profile.png"
-                alt="profile pic"
-                class="details-img3"
-              />
-              <span class="username">User Name :</span>
-            </div>
-            <div>
-              <span>User Review :</span>
-              <span class="details-rating">5.0</span>
-            </div>
-            <div class="details-reviews2">User Comment about the book</div>
-          </div>
-          <div class="comment-box">
-            <div class="username1">
-              <img
-                src="../assest/profile.png"
-                alt="profile pic"
-                class="details-img3"
-              />
-              <span class="username">User Name :</span>
-            </div>
-            <div>
-              <span>User Review :</span>
-              <span class="details-rating">5.0</span>
-            </div>
-            <div>
-              <span>User Comment :</span>
-              <span class="details-reviews2">about the book</span>
-            </div>
-          </div>
-          <div class="comment-box">
-            <div class="username1">
-              <img
-                src="../assest/profile.png"
-                alt="profile pic"
-                class="details-img3"
-              />
-              <span class="username">User Name :</span>
-            </div>
-            <div>
-              <span>User Review :</span>
-              <span class="details-rating">5.0</span>
-            </div>
-            <div>
-              <span>User Comment :</span>
-              <span class="details-reviews2">about the book</span>
-            </div>
-          </div>
           <div class="comment-box">
             <div class="username1">
               <img
