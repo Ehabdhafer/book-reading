@@ -51,7 +51,13 @@
   display: flex;
   gap: 160px;
 }
-
+#select {
+  border: 2px solid var(--red);
+  border-radius: 6px;
+  min-height: 40px;
+  width: 60px;
+  text-align: center;
+}
 .write-review {
   margin-top: 20px;
   min-height: 40px;
@@ -106,6 +112,7 @@
 }
 
 .cards {
+  margin-top: -40px;
   display: flex;
   padding: 25px 0px;
   list-style: none;
