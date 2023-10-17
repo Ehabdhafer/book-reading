@@ -6,32 +6,19 @@
   --footer-bg: #191717;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 a {
   color: inherit;
 }
 
-body {
-  font: 18px/1.5 sans-serif;
-  margin: 0;
-}
+.container-footer {
 
-button {
-  cursor: pointer;
-  font-size: 100%;
-}
-
-.footercontain {
   max-width: 1400px;
   padding: 0 20px;
   margin: 0 auto;
 }
 
 /* MAIN STYLES
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .site-wrapper {
   display: flex;
   flex-direction: column;
@@ -52,6 +39,7 @@ button {
 .site-header a {
   line-height: 1;
 }
+
 
 .site-main {
   display: flex;
@@ -81,7 +69,7 @@ button {
 .site-footer .widgets-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-block: 1px solid rgba(255, 255, 255, 0.2);
+  border-block: 1px solid rgba(255,255,255,0.2);
   margin-top: 20px;
 }
 
@@ -106,7 +94,7 @@ button {
 
 .site-footer .socials {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto ;
   justify-content: flex-start;
   grid-gap: 15px;
 }
@@ -114,6 +102,7 @@ button {
 .site-footer .socials svg {
   fill: var(--white);
 }
+
 
 @media (max-width: 650px) {
   .site-footer .widgets-wrapper {
@@ -123,7 +112,7 @@ button {
 }
 
 /* CREATOR STYLES
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .creator {
   position: fixed;
   right: 0;
@@ -134,7 +123,6 @@ button {
   font-size: 0.75em;
   background: var(--white);
 }
-
 .creator a {
   display: flex;
   margin-left: 4px;
