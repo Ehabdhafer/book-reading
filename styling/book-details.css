@@ -18,6 +18,9 @@
 }
 .details2 {
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .fav-button {
   border: 0;

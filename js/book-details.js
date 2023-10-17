@@ -375,60 +375,58 @@ document.addEventListener("DOMContentLoaded", function () {
 // }
 
 // ----------------------------------------------------------------------------
-function addToFav(event){
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = parseInt(urlParams.get("id"));
-    let heartIcon = document.querySelector(`.fav-icon`)
+function addToFav(event) {
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = parseInt(urlParams.get("id"));
+  let heartIcon = document.querySelector(`.fav-icon`);
 
-    var user = sessionStorage. getItem('userId');
-    if(user == null || user == ""){
-        window.location = "/HTML/signin.html";
-    }else{
-        if(heartIcon.classList.contains('far')){
-            heartIcon.classList.remove('far');
-            heartIcon.classList.add('fas');
-    
-            // add to fav
-            fetch("http://localhost:3000/favourite", {
-                method: "POST",
-                body: JSON.stringify({
-                    user: user,
-                    id: id,
-                }),
-                headers: {
-                    "Content-type": "application/json; charset=UTF-8"
-                }
-            })
-            .then(response => {response.json()} )
-            .then(json => {
-                console.log('POST Success:', json);
-            })
-            .catch(error => console.error('POST Error:', error));
-            event.preventDefault();
-    
-    
-        }else if(heartIcon.classList.contains('fas')){
-            heartIcon.classList.remove('fas');
-            heartIcon.classList.add('far');
-    
-            // delete from fav
-            fetch(`http://localhost:3000/favourite/${id}`, {
-                method: 'DELETE',
-                })
-                .then(response => {
-                    if (response.status === 204) {
-                    console.log('Post deleted successfully');
-                    } else {
-                    console.error('Error deleting post');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });        
-            event.preventDefault();
+  var user = sessionStorage.getItem("userId");
+  if (user == null || user == "") {
+    window.location = "/HTML/signin.html";
+  } else {
+    if (heartIcon.classList.contains("far")) {
+      heartIcon.classList.remove("far");
+      heartIcon.classList.add("fas");
 
-        }
+      // add to fav
+      fetch("http://localhost:3000/favourite", {
+        method: "POST",
+        body: JSON.stringify({
+          user: user,
+          id: id,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => {
+          response.json();
+        })
+        .then((json) => {
+          console.log("POST Success:", json);
+        })
+        .catch((error) => console.error("POST Error:", error));
+      event.preventDefault();
+    } else if (heartIcon.classList.contains("fas")) {
+      heartIcon.classList.remove("fas");
+      heartIcon.classList.add("far");
+
+      // delete from fav
+      fetch(`http://localhost:3000/favourite/${id}`, {
+        method: "DELETE",
+      })
+        .then((response) => {
+          if (response.status === 204) {
+            console.log("Post deleted successfully");
+          } else {
+            console.error("Error deleting post");
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+      event.preventDefault();
     }
-    event.preventDefault();
-
+  }
+  event.preventDefault();
 }
