@@ -1,7 +1,7 @@
 // ---------------------------------classes
 // books class
-class Book{
-    constructor(id, image, title, author, category, release_date, rating, description){
+class Book {
+    constructor(id, image, title, author, category, release_date, rating, description) {
         this.id = id;
         this.image = image;
         this.title = title;
@@ -10,8 +10,9 @@ class Book{
         this.release_date = release_date;
         this.rating = rating;
         this.description = description;
-      }
+    }
 }
+
 
 // ---------------------------------functions
 
@@ -20,7 +21,7 @@ function addTopRated(){
     fetch('http://localhost:3000/books')
         .then(response => response.json())
         .then(json => {
-            books = json.map(function(element){
+            books = json.map(function (element) {
                 book = new Book(element.id, element.image, element.title, element.author, element.category, element.release_date, element.rating, element.description);
                 return book;
             });
@@ -30,7 +31,7 @@ function addTopRated(){
                 (b1, b2) => (b1.rating < b2.rating) ? 1 : (b1.rating > b2.rating) ? -1 : 0);
 
             let cards = '<ul class="cards">';
-            for(i=0; i<10; i++){
+            for (i = 0; i < 10; i++) {
                 cards += `
                 <li class="card top-rate" onclick="clickCard(${i},'top-rate')"></li>`;
             }
@@ -47,7 +48,7 @@ function addNewArrival(){
     fetch('http://localhost:3000/books')
         .then(response => response.json())
         .then(json => {
-            books = json.map(function(element){
+            books = json.map(function (element) {
                 book = new Book(element.id, element.image, element.title, element.author, element.category, element.release_date, element.rating, element.description);
                 return book;
             });
@@ -56,9 +57,9 @@ function addNewArrival(){
             NewArrival = books.sort(
                 (b1, b2) => (b1.release_date < b2.release_date) ? 1 : (b1.release_date > b2.release_date) ? -1 : 0);
 
-                console.log(NewArrival);
+            console.log(NewArrival);
             let cards = '<ul class="cards">';
-            for(i=0; i<10; i++){
+            for (i = 0; i < 10; i++) {
                 cards += `
                 <li class="card newBooks" onclick="clickCard(${i},'newBooks')"></li>`;
             }
@@ -141,11 +142,11 @@ function clickCard(id, section){
         }
     });
     console.log(listItems);
-    listItems[id].setAttribute('id','clicked');
+    listItems[id].setAttribute('id', 'clicked');
     // add the new content to its document
-    if(section == 'top-rate'){
+    if (section == 'top-rate') {
         printCards(section, topRated);
-    }else if(section = 'newBooks'){
+    } else if (section = 'newBooks') {
         printCards(section, NewArrival);
     }
 }
@@ -192,6 +193,7 @@ function printCards(section, bookList){
                 </div>
             </div>`;
             i++;
+
         }else{
             var idAttribute = item.getAttribute("onclick");
             console.log(idAttribute);
@@ -273,6 +275,7 @@ function addToFav(id, index, section, event){
         
         }
     }
+    event.preventDefault();
 
 }
 

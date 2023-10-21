@@ -111,7 +111,7 @@ document.getElementById('signin').addEventListener('click', async function (even
                 showInvalidMsg("User data not found.");
             }
             setTimeout(() => {
-                window.location.href = "../index.html"; // Navigate to the homepage here
+                window.location.href = "../index.html";
             }, 1100);
 
         })

@@ -1,8 +1,8 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
 
 /*---------------------------------------------Main Section----------------------------------------------------------------------------*/
 .Herosectioncontactus{
+  
     height: 200px;
     width: 100%;
     display: grid ;
@@ -24,59 +24,61 @@
 }
 
 /*-------------------------------------------------About us-------------------------------------------------*/
-.aboutusfullcont{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-}
 
+.aboutussection-container{
+  padding: 0;
+  margin: 0px 0px 300px 0px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+}
 .aboutus-section{
-    background: url(/assest/aboutus.png) no-repeat left;
-    background-size: 40%;
-    background-color: white;
-    overflow: hidden;
-    padding: 140px 0px 0px 0px;
-    margin-left: 200px;
+  background: url(/assest/aboutus2.jpg) no-repeat ;
+  background-size: 80%;
+  overflow: hidden;
+  padding: 200px 0;
 }
 
-.inner-aboutus-container{
-    width: 60%;
-    float: right;
-    background-color: white;
-    padding: 150px;
+.aboutus-inner-cont{
+  width: 50%;
+  float: right;
+  background-color: #e55604d2;
+  padding: 120px;
+  
 }
 
-.inner-aboutus-container{
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 900;
+.aboutus-inner-cont h1{
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 700;
 }
 
-.aboutusdesc{
-    font-size: 13px;
-    color: black;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
-    font-weight: 100;
+.aboutus-inner-cont p{
+  line-height: 30px;
+  color: white;
+  text-align: justify;
+  font-size: 17px;
+  margin-bottom: 40px;
 }
 
-
-.user-name{
-    margin-top: 10px;
-    font-size: 35px;
-    color: black;
+.contactus-goto{
+  display: flex;
+  justify-content: left;
+  font-weight: 700;
+  font-size: 13px;
 }
 
-.profile h5{
-    font-size: 18px;
-    font-weight: 100;
-    letter-spacing: 3px;
-
+.aboutus-inner-cont span{
+  color: white;
 }
 
+.poos{
+  margin-left: 20px;
+}
 
 
 
@@ -84,7 +86,7 @@
 
 
 .form-container{
-    margin-left: 19%;
+    margin-left: 23%;
     max-width: 900px;
     margin-top: 0 auto;
     background-color: white;
@@ -205,7 +207,7 @@ textarea{
 
 #contactusbefore{
     margin-top: 100px;
-    height: 100vh;
+    height: 40vh;
     
 }
 
@@ -392,6 +394,12 @@ textarea{
   
   .team-member-image {
     max-width: 100%;
+    filter: grayscale(100%);
+    transition: 400ms ease;
+  }
+
+  .team-member-image:hover {
+    filter: grayscale(0%);
   }
   
   @media (max-width: 500px) {
@@ -445,16 +453,22 @@ textarea{
 
 }
 
+@media screen and (max-width : 1335px){
+
+  .aboutus-inner-cont{
+   padding: 50px;
+   
+  }
+}
 
 @media screen and (max-width : 1200px){
 
-    .aboutussection{
-        
-    }
+   .aboutus-inner-cont{
+    padding: 40px;
+    
+   }
 
-    .inner-aboutus-container{
-        padding: 80px;
-    }
+    
     .contact-form .main{
         flex-direction: column;
         margin-left: 0;
@@ -488,22 +502,46 @@ textarea{
 
 }
 
-@media screen and (max-width : 1000px){
+@media screen and (max-width : 1170px){
+
+  .aboutus-section{
+    background-size: 100%;
+    padding: 100px 40px;
+  }
+  .aboutus-inner-cont{
+   padding: 200px auto;
+   
+   width: 100%;
+  }
+}
+
+
+
+
+@media screen and (max-width : 1058px){
     .inner-aboutus-container{
-        width: 100%;
+        width: fit-content;
+        margin: 150px 100px 100px 100px;
+        padding: 80px 0px 0px 0px;
+        word-wrap: break-word;
 
     }
-
     
     .aboutus-section{
-        background-size: 0;
-        padding: 100px 40px;
-        margin-left: 0;
-
+      height: 900px;
     }
+   
     .inner-before-container h1{
-        font-size: 4rem;
+        font-size: 50px;
+        padding-top: 10%;
+        word-wrap: break-word;
     }
+
+    .inner-before-container p{
+
+      word-wrap: break-word;
+  }
+
 
     .inner-before-container ul{
         justify-content: center;
@@ -512,6 +550,13 @@ textarea{
 
     }
     
+    .aboutusdesc {
+      
+      font-size: 15px;
+
+    }
+
+
 }
 
 @media screen and (max-width : 470px){
@@ -521,6 +566,12 @@ textarea{
 }
 
 @media screen and (max-width : 830px){
+
+
+  #contactusbefore{
+    margin-bottom: 400px;
+  }
+
     .Herosectioncontactus > h1{
         font-size: 2rem;
     }
@@ -556,14 +607,51 @@ textarea{
         order: 3;
     }
 
-   
+}
 
 
+@media screen and (max-width : 830px  ){
+  .aboutus-section{
+    background-size: 0%;
+    padding: 0; 
+    
+   }
+  .aboutus-inner-cont{
+    padding: 60px;
+  
+  }
+
+  .aboutus-section{
+    max-height: fit-content;
+  }
+  
 }
 
 @media screen and (max-width : 600px){
+.aboutus-section{
+  background:none;
+  height: 900px;
+  width: 100%;
+}
+.aboutusdesc{
+
+  width: 100%;
+  margin: 10px;
+  padding: 10px 0px 10px 100px;
+  text-align: left;
+}
+
+.inner-aboutus-container h1{
+  padding: 10px 0px 10px 100px;
+}
+
+.inner-aboutus-container p{
+  width: 100%;
+}
+.aboutus-section{width: 100%;}
+
     .inner-aboutus-container{
-        padding: 60px;
+        padding: 0px;
         
     }
     .aboutus-section{

@@ -70,8 +70,11 @@
     background-color: var(--platinum);
 }
 .recommend{
-    padding: 5px;
+    margin: 10px;
 }
+.recommend:not(:last-child) {
+    border-bottom: 1px solid grey;
+  }
 .recommend p{
     font-size: small;
     color: gray;

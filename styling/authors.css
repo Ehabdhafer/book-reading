@@ -1,16 +1,21 @@
 .Herosectioncontactus{
-  height: 200px;
-  width: 100%;
+  
+  width: 100% !important;
   display: grid ;
-  grid-template-columns: 50% 40%;
-  background-color: white;
+  
+ 
 }
 .Herosectioncontactus > h1{
-  background-color: white;
-  color: black;
+  position: absolute;
+  color:  black;
   padding-top: 80px;
+  padding: 30px;
+  align-items: center;
   font-weight: 100;
   font-size: 80px;
+  margin-left: 600px;
+  margin-top: 100px;
+ 
 }
 .containor{
 justify-content: center;
@@ -54,21 +59,20 @@ body {
   box-sizing: border-box;
 }
 .card {
-  background: #ffffff;
-  width: var(--card-width);
-  height: fit-content;
-  position: relative;
-  border-radius: 6px;
-  align-items: center;
-  text-align: center;
   display: flex;
-  color: rgb(88 199 250 / 0%);
-  cursor: pointer;
-  font-family: cursive;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+  scroll-snap-align: start;
+  transition: all 0.2s;
+  border: 2px solid gray;
+  height: fit-content;
 }
  .card:hover {
-  color: rgb(217, 93, 16);
+  color: #d95d10;
   transition: color 1s;
+  border: 2px solid #d95d10;
 }
 .card:hover {
   color: var(--darkred);
@@ -78,6 +82,10 @@ body {
   font-size: 1.1em;
   font-weight: 600;
 }
+ .card#clicked:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    border: 2px solid gray;
+  }
 @keyframes spin {
   0% {
     --rotate: 0deg;
@@ -91,6 +99,7 @@ a {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
+  /* margin-top: 2rem; */
   display: contents;
 }
 @media(max-width: 960px){

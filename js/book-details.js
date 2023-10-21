@@ -128,7 +128,7 @@ async function bookcatg(id) {
           );
           return book;
         });
-        books1.sort();
+        // books1.sort();
         Related = books1.sort((b1, b2) =>
           b1.category === b2.category ? 1 : b1.category !== b2.category ? -1 : 0
         );

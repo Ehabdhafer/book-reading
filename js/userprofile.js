@@ -19,6 +19,7 @@ async function getUserData(id) {
 
   document.querySelector(".address2").textContent = address;
 }
+
 getUserData(1);
 // -----------------------------------------------------
 async function updateUserData() {
@@ -166,28 +167,22 @@ function displayFav() {
             favorites.forEach((element) => {
               document.getElementById(
                 "cards"
-              ).innerHTML += `<li class="card" id="favCard" onclick="window.location='/HTML/book-details.html?id=${
-                element.id - 1
-              }'">
+              ).innerHTML += `<li class="card" id="favCard" onclick="window.location='/HTML/book-details.html?id=${element.id
+                }'">
                                     <div class="text-center">
-                                        <img src="${
-                                          books[element.id - 1].image
-                                        }" class="card-img-top mb-3" alt="${
-                books[element.id - 1].title
-              }" style="height: 200px">
+                                        <img src="${books[element.id -1].image
+                }" class="card-img-top mb-3" alt="${books[element.id -1].title
+                }" style="height: 200px">
                                         <div class="content-container px-3">
                                             <div class="d-flex justify-content-between">
-                                                <h3 class="card-title" style="height: 52px; overflow: hidden;">Title: ${
-                                                  books[element.id - 1].title
-                                                }</h3>
-                                                <a id="fav" onclick="deleteFav(${
-                                                  books[element.id - 1].id
-                                                }, event)" style="text-decoration: none; color: #E55604;"><i class="fav-icon fas fa-heart"></i></a>
+                                                <h3 class="card-title" style="height: 52px; overflow: hidden;">Title: ${books[element.id -1].title
+                }</h3>
+                                                <a id="fav" onclick="deleteFav(${books[element.id -1].id
+                }, event)" style="text-decoration: none; color: #E55604;"><i class="fav-icon fas fa-heart"></i></a>
                                             </div>
                                             <div class="card-content">
-                                                <p style="height: 48px">Author: ${
-                                                  books[element.id - 1].author
-                                                }</p>
+                                                <p style="height: 48px">Author: ${books[element.id -1].author
+                }</p>
                                             </div>
                                         </div>
                                     </div>

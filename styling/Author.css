@@ -23,7 +23,7 @@ section {
   margin-bottom: 20px;
 }
 .hero-section {
-  background-image: url('/assest/background\ author.jpg'); /* Replace 'path/to/your-image.jpg' with the actual image file path */
+  background-image: url('/assest/background_author.jpg'); /* Replace 'path/to/your-image.jpg' with the actual image file path */
   background-size: cover; /* This property scales the background image to cover the entire container */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   background-position: center; /* Center the image horizontally and vertically */
@@ -348,7 +348,7 @@ a {
   line-height: 1;
 }
 #author-img{
-  max-width: 700px;
+  max-width: 350px;
   min-width: 500px;
 }
 
